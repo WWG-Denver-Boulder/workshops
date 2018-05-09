@@ -19,7 +19,6 @@ Ex:
 - `USE job_board_db;`
 
 ## Create Tables
-### Command Line
 - `CREATE TABLE user_roles_t (login varchar(32) not null, type varchar(11) not null);`
 - `show tables;`
 - `desc user_roles_t;`
@@ -30,3 +29,7 @@ Ex:
 ## Delete Table or DB
 - `DROP TABLE user_roles_t;`
 - `DROP DATABASE job_board_db;`
+
+## Resources
+- [database/sql] (https://golang.org/pkg/database/sql/)
+- [mysql driver] (https://github.com/go-sql-driver/mysql/)
