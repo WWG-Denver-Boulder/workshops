@@ -31,5 +31,5 @@ Ex:
 - `DROP DATABASE job_board_db;`
 
 ## Resources
-- [database/sql] (https://golang.org/pkg/database/sql/)
-- [mysql driver] (https://github.com/go-sql-driver/mysql/)
+- [database/sql](https://golang.org/pkg/database/sql/)
+- [mysql driver](https://github.com/go-sql-driver/mysql/)
