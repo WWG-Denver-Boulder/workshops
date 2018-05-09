@@ -23,7 +23,8 @@ Ex:
 - `CREATE TABLE user_roles_t (login varchar(32) not null, type varchar(11) not null);`
 - `show tables;`
 - `desc user_roles_t;`
-### SQL Script
+
+## Add Data
 - `mysql -u root -p < load_data.sql`
 
 ## Delete Table or DB
