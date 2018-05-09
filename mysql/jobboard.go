@@ -25,10 +25,30 @@ func main() {
 		log.Fatal(err)
 	}
 	
+
+	err = getAll(db)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// // add another record and get all results again
+	// query := `insert into user_roles_t (login, type) VALUES (?, ?)`
+	// _, err = db.Exec(query, "testuser2", "user")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	// err = getAll(db)
+	// if err != nil {
+	// 	log.Fatal(err)
+
+}
+
+func getAll(db *sql.DB) error{
 	// get all rows	
 	rows, err := db.Query("select * from user_roles_t")
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 	defer rows.Close()
 	
@@ -39,12 +59,15 @@ func main() {
 	for rows.Next() {
 		err := rows.Scan(&login, &roleType)
 		if err != nil {
-			log.Fatal(err)
+			return err
 		}
 		log.Println(login, roleType)
 	}
+	
 	err = rows.Err()
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
+
+	return nil
 }
