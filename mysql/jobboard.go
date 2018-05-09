@@ -25,7 +25,7 @@ func main() {
 		log.Fatal(err)
 	}
 	
-	// execute a query	
+	// get all rows	
 	rows, err := db.Query("select * from user_roles_t")
 	if err != nil {
 		log.Fatal(err)
@@ -35,7 +35,7 @@ func main() {
 	var login string
 	var roleType string
 	
-	// iterate on the results
+	// iterate on the results and print each one
 	for rows.Next() {
 		err := rows.Scan(&login, &roleType)
 		if err != nil {
