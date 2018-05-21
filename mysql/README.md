@@ -15,7 +15,7 @@ Ex:
 - `mysql -uroot -p` enter password
 
 ## Create Database
-- `CREATE DATABSE job_board_db;`
+- `CREATE DATABASE job_board_db;`
 - `USE job_board_db;`
 
 ## Create Tables
